@@ -1,0 +1,7 @@
+### 发送一个AI聊天请求
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+"message":"我现在问你，我叫什么名字？"
+}

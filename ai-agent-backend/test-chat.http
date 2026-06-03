@@ -1,0 +1,18 @@
+### 1. 告诉 AI 你的名字
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "message": "我叫小明"
+}
+
+### 2. 清空当前记忆
+DELETE http://localhost:8080/api/chat/memory
+
+### 3. 再问 AI 你叫什么
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "message": "我叫什么？"
+}
