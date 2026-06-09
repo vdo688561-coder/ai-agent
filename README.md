@@ -65,6 +65,20 @@ OPENAI_API_KEY=你的 API Key
 
 后端当前使用的是 OpenAI-compatible API 配置，`base-url` 和 `model-name` 可在 `ai-agent-backend/src/main/resources/application.properties` 中调整。
 
+如果使用 PowerShell 临时设置本次终端会话的配置，可以按下面方式启动：
+
+```powershell
+cd E:\SpringBootVueTest\ai-agent\ai-agent-backend
+
+$env:OPENAI_API_KEY="你的真实 API Key"
+$env:OPENAI_BASE_URL="https://api.openai.com/v1"
+$env:OPENAI_MODEL="gpt-5.4"
+
+mvn spring-boot:run
+```
+
+注意：不要把真实 API Key 写进 `application.properties`、README 或其他会提交到 Git 的文件中。`OPENAI_BASE_URL` 只需要写到 `/v1`，不要拼接 `/chat/completions`。
+
 ## 启动项目
 
 ### 启动后端
